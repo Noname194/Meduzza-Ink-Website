@@ -1,0 +1,1092 @@
+* {
+    //border: solid 1px blue;
+    box-sizing: border-box;
+}
+
+
+body,
+figure,
+p,
+article {
+    margin: 0;
+    font-family: 'Mukta', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+button {
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+img {
+    width: 100%;
+    vertical-align: -webkit-baseline-middle;
+}
+
+/*=========================================*/
+            /*LOAD-PAGE*/   
+/*=========================================*/
+
+
+.load-page {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+    background-color: #2f3135;
+    z-index: 10;
+    .loader-container {
+        width: 200px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .loader {
+            width: 100%;
+            animation: spin 10s linear infinite;
+        }
+
+    }
+    
+
+}
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.close-load {
+    transition: 800ms ease;
+    opacity: 0;
+}
+
+
+
+
+/*=========================================*/
+            /*NAVBAR*/   /*#2f3135*/
+/*=========================================*/
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #343d46;
+    z-index: 2;
+    transition: 500ms ease;  
+}
+.navbar-top {
+    display: none;
+}
+
+.navbar-hide {
+    transform: translate3d(0,100px,0)
+}
+
+.navbar-container {
+    text-align: center;
+}
+
+
+.menu-icon {
+    font-size: 3em;
+    padding: 10px;
+    color: white;
+    border: none;
+    transition: 800ms ease;
+}
+
+.info-icon {
+    color: white;
+    font-size: 1.6em;
+    padding: 10px;
+    padding-right: 15px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+
+
+/*=========================================*/
+            /*MENU-MODAL*/
+/*=========================================*/
+
+.menu-modal {
+    display: none;
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    position: fixed;
+    background-color: #8e8e8e;
+    background-image: -webkit-linear-gradient(19deg, #8e8e8e 0%, #060606 100%);
+    background-image: -moz-linear-gradient(19deg, #8e8e8e 0%, #060606 100%);
+    background-image: -o-linear-gradient(19deg, #8e8e8e 0%, #060606 100%);
+    background-image: linear-gradient(19deg, #8e8e8e 0%, #060606 100%);
+
+    transition: 1s ease;
+}
+
+.is-open {
+    transition: 1s ease;
+    opacity: 0.9;
+}
+
+.menu-list-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 2em;
+    text-align: center;
+    li {
+        padding: 10px;
+        a {
+            color: white;
+        }
+        a:visited {
+            color: white;
+        }
+    }
+}
+
+.meduzza-icon {
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    bottom: 200px;
+    transform: translate(-50%, 0);
+    img {
+        width: 100%;
+    }
+
+}
+
+/*=========================================*/
+            /*INFO MODAL STYLES*/
+/*=========================================*/
+
+.info-modal {
+    position: fixed;
+    display: none;
+    z-index: 1;
+    background-color: rgba(0,0,0,0);
+    height: 100vh;
+    width: 100%;
+    overflow: auto;
+    padding-bottom: 200px;
+    transition: 300ms;
+
+}
+
+.info-modal-open {
+    transition: 300ms;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.info-modal-container {
+    position: relative;
+    top: -1000px;
+    width: 85%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    text-align: center;
+    transition: 500ms ease;
+    box-shadow: 5px 5px 10px;
+
+}
+
+.info-modal-container-show {
+    transition: 500ms ease;
+    top: 30px;
+}
+
+.contact-section-container {
+    margin: 0 auto;
+    h3, p {
+        text-align: center;
+        
+    }
+}
+
+.address-container,
+.work-hour-container {
+    padding: 10px;
+}
+    
+.direction-btn,
+.tel-btn,
+.face-btn {
+    margin-top: 10px;
+}
+
+.tel-btn {
+    margin-right: 20px;
+}
+
+
+.info-btn {
+    width: 80px;
+    height: 80px;
+    border: solid 1px black;
+    border-radius: 100px;
+    background-color: #000000;
+    color: white;
+    transition: 300ms;
+}
+.info-btn:hover {
+    transition: 300ms;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+/*=========================================*/
+            /*FOOTER STYLES*/
+/*=========================================*/
+
+footer {
+    background-color: black;
+    text-align: center;
+    font-size: 12px;
+    p {
+        color: white;
+        a {
+            color: #898989;
+        }
+        a:visited {
+            color: #898989;
+        }
+    }
+}
+
+.footer-content-container {
+    padding: 12px;
+}
+
+/*=========================================*/
+            /*HOME PAGE STYLES*/
+/*=========================================*/
+
+.home-page-container {
+    overflow: hidden;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.enter-right-animation {
+    animation-name: enter-right;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+
+@keyframes enter-right {
+    from {transform: translate(-100px)}
+    to {transform: translate(0)}
+}
+
+.enter-left-animation {
+    animation-name: enter-left;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+
+@keyframes enter-left {
+    from {transform: translate(100px)}
+    to {transform: translate(0)}
+}
+
+
+
+
+/*=========================================*/
+            /*ARTISTS PAGE STYLES*/
+/*=========================================*/
+
+
+.artist-page {
+    padding-bottom: 75px;
+    background-color: #000000;
+    background-image: -webkit-linear-gradient(180deg, #000000 25%, #9e9e9e 100%);
+    background-image: -moz-linear-gradient(180deg, #000000 25%, #9e9e9e 100%);
+    background-image: -o-linear-gradient(180deg, #000000 25%, #9e9e9e 100%);
+    background-image: linear-gradient(180deg, #000000 25%, #9e9e9e 100%);
+
+
+}
+
+
+
+
+.page-title {
+    height: 100vh;
+    text-align: center;
+    background-image: url('../imgs/artist-page-bg-g.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 58% 50%;
+    color: white;
+    .title-text {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+    }
+}
+
+.central {
+    justify-content: center;
+}
+
+.thumb-container {
+    height: 300px;
+    margin-top: 10px;
+    padding: 10px;
+    opacity: 0;
+    transform: translate3d(0,50px,0);
+    .artist-img {  
+        object-fit: cover;
+        height: 100%;
+        box-shadow: 0 0 3px 2px #a7adba;
+    }
+}
+.name {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    font-size: 1.3em;
+    transform: translate(-50%, 0);
+    color: white;
+    text-align: center;
+
+}
+
+.img-adjust {
+    object-position: 0 25%;
+    object-fit: none;
+}
+
+.thumb-container:nth-child(1) {
+    margin-top: 5px;
+}
+
+
+.artist-show-up {
+    transition: 800ms ease;
+    opacity: 1;
+    transform: translate3d(0,0,0);
+}
+
+
+
+
+
+
+
+
+/* -----PROFILE PAGE-----*/
+
+.profile-page {
+    padding-bottom: 75px;
+}
+
+
+.artist-profile {
+    background-color: #e0e0e0;
+}
+
+.artist-photo-container {
+   background-color: #343d46; 
+}
+
+.artist-photo {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 20px 20px;  
+}
+
+.artist-bg {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1000px;
+}
+
+
+.artist-info-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.artist-about {
+    width: 100%;
+}
+
+.artist-text-about {
+    padding: 20px;
+    margin: 3em;
+    background-color: white;
+    box-shadow: 5px 5px 20px;
+}
+
+
+.artist-social-media {
+    text-align: center;
+    align-content: center;
+    width: 100%;
+    background-color: #70747a;
+    padding: 40px;
+    .social-media-container {
+        ul {
+            text-align: center;
+            font-size: 3em;
+            margin: 0;
+        }
+    }
+}
+
+.social-link {
+    display: inline-block;
+    opacity: 0;
+    padding: 10px;
+    a {
+        color: white;
+        i:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+
+
+.responsive {
+    width: 100%;
+}
+
+.port-thumb-container {
+    height: 400px;
+}
+
+.port-thumb {
+    height: 100%;
+    object-fit: cover;
+}
+
+.artist-list-menu {
+    position: fixed;
+    top: 30px;
+    right: 0;
+    text-align: center;
+    display: flex;
+    
+}
+
+.arrow {
+    color: white;
+    height: fit-content;
+    width: 40px;
+    background-color: rgb(37, 37, 37);
+    font-size: 3em;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.list-menu-container {
+    background-color: rgb(37, 37, 37);
+}
+
+.list-menu {
+    margin: 0;
+    li {
+        border: solid 1px white;
+        z-index: 1;
+        a {
+            color: white;
+            display: block;
+            padding: 10px;
+        }
+        a:visited {
+            color: white;
+        }
+    }
+    a:hover {
+        transition: 200ms ease;
+        background-color: rgb(148, 48, 48);
+        color: black;
+
+    }
+}
+
+
+    
+
+
+
+
+
+/*=========================================*/
+            /*FLASH DAY STYLES*/
+/*=========================================*/
+.flash-page {
+    padding-bottom: 75px;
+    background-color: #e0e0e0;
+}
+
+.flashday-header {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../imgs/flashday-page-bg-g.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.opacity-black {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.flashday-title {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    h1 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+}
+
+.flashday-about-container {
+    width: 100%;
+    padding-top: 50px;
+    padding: 20px;
+    margin: 30px auto;
+    background-color: white;
+}
+
+.flashday-about {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.video-container {
+    width: 100%;
+    .video-flash-day {
+        width: 100%;
+        vertical-align: -webkit-baseline-middle;
+    }
+}
+
+.flashday-text {
+    color: black;
+    font-size: 1.5em;
+    text-align: center;
+    width: 100%;
+    margin: 30px 0;
+}
+
+.meduzza-social-media-container {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+.social-media-list {
+    margin-top: 30px;
+    li {
+        display: inline;
+        font-size: 3em;
+        a {
+            color: black;
+            i:hover {
+                transform: scale(1.2);
+            }
+        }
+        a:visited {
+            color: black;
+        }
+        .facebook {
+            margin-right: 20px;
+        }
+        
+    }
+    
+}
+
+
+
+/*=========================================*/
+            /*ABOUT STYLES*/
+/*=========================================*/
+
+.about-page{
+    padding-bottom: 75px;
+    
+}
+
+.about-header {
+    height: 100vh;
+    background-image: url('../imgs/about-bg-g.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    .about-header-text {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        text-align: center;
+        color: white;
+    }
+}
+
+.title {
+    text-align: center;
+    width: 85%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    padding-top: 30px; 
+    border-bottom: solid 1px black;
+    
+}
+
+.margin-center {
+    display: block;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.about-info-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-text-center {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+}
+
+.first-text{
+    order: 0;
+    margin: 50px 0;
+}
+.first-img{
+    order: 1;
+}
+
+.second-text{
+    order: 2;
+    margin: 50px 0;
+}
+.second-img{order: 3;}
+
+.third-text{
+    order: 4;
+    margin: 50px 0;
+}
+.third-img{order: 5;}
+
+
+//================= ANIMAÇÃO Mobile ==============
+
+
+    [data-anime] {
+        opacity: 0;
+        transition: 500ms ease;
+    }
+
+    [data-social] {
+        opacity: 0;
+        transition: 300ms ease;
+    }
+    
+    // a tag esta com essa data, ela carrega com 100px a mais
+    [data-anime="up"] {
+        transform: translate3d(0, 100px, 0);
+    }
+
+    [data-anime="down"] {
+        transform: translate3d(0, -100px, 0);
+    }
+
+    [data-social="left"] {
+        transform: translate3d(30px, 0, 0);
+    }
+    
+    .animate {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+
+    // Menu dos artistas, open e close
+    [data-menu] {
+        transition: 800ms ease;
+    }
+
+    [data-menu="close"] {
+        transform: translate3d(84px,0,0);
+    }
+
+    [data-menu="open"] {
+        transform: translate3d(0,0,0);
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+/*=========================================*/
+            /*GRID SYSTEM*/
+/*=========================================*/
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+
+
+
+/*========================================================================================*/
+        /*BREAKPOINT --- TABLET*/
+/*========================================================================================*/
+@media only screen and (min-width: 680px) {
+
+    // Artis Profile----------------
+
+    .artist-about {
+       width: 50%;
+    }
+
+    .artist-social-media {
+        width: 50%;
+    }
+
+    .social-media-container {
+        position: relative;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    //---- About Page -----
+
+    .about-info-container {
+        display: flex;
+        flex-wrap: wrap;
+        .about-text-container {
+            width: 50%;
+            background-color: #343d46;
+            margin: 0;
+            .about-text-center {
+                position: relative;
+                top: 50%;
+                transform: translate(0, -50%);
+                color: white;
+                text-align: center;
+                font-size: 20px;
+                padding: 20px;
+            }
+        }
+        .first-img,
+        .second-img,
+        .third-img {
+            background-color: #343d46;
+        }
+        .about-img {
+            width: 50%;
+            img {
+                position: relative;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+            
+        }
+    }
+
+    //-----FlashDay page -----
+    .flashday-about-container {
+        width: 85%;
+        
+    }
+
+    .first-text{order: 0;}
+    .first-img{order: 1;}
+    .second-text{order: 3;}
+    .second-img{order: 2;}
+    .third-text{order: 4;}
+    .third-img{order: 5;}
+
+
+
+  
+    
+
+   
+   
+
+   
+
+
+    .col-md-1 {width: 8.33%;}
+    .col-md-2 {width: 16.66%;}
+    .col-md-3 {width: 25%;}
+    .col-md-4 {width: 33.33%;}
+    .col-md-5 {width: 41.66%;}
+    .col-md-6 {width: 50%;}
+    .col-md-7 {width: 58.33%;}
+    .col-md-8 {width: 66.66%;}
+    .col-md-9 {width: 75%;}
+    .col-md-10 {width: 83.33%;}
+    .col-md-11 {width: 91.66%;}
+    .col-md-12 {width: 100%;}
+
+}
+
+
+/*=========================================*/
+        /*BREAKPOINT --- DESKTOP*/
+/*=========================================*/
+
+@media only screen and (min-width: 1024px) {
+  
+
+    /*=========================================*/
+            /*NAVBAR-TOP*/   /*#2f3135*/
+    /*=========================================*/
+
+    .navbar {
+        display: none;
+    }
+
+    .navbar-top {
+        display: block;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        opacity: 0.8;
+        background-color: black;
+        z-index: 2;
+        .navbar-top-container {
+            font-size: 20px;
+            .navbar-links {
+                margin: 10px;
+                text-align: center;
+                li {
+                    display: inline-block;
+                    transition: 300ms;
+                    vertical-align: -webkit-baseline-middle;
+                    a {
+                        color: white;
+                        padding: 0 20px;
+                    }
+                    a:visited {
+                        color: white;
+                    }
+                    
+                }
+                li:hover {
+                    transition: 300ms;
+                    transform: scale(1.1);
+                }
+                
+            }
+        }
+        
+
+    }
+
+    .meduzza-icon-navbar-top {
+        img{
+            width: 60px;
+        }
+        
+    }
+
+    .info-modal-top {
+        color: white;
+        cursor: pointer;  
+    }
+
+
+    // ----- info-modal-----
+    .info-modal-container {
+        position: relative;
+        top: -1000px;
+        width: 45%;
+        margin: 0 auto;
+        overflow: auto;
+        background-color: white;
+        text-align: center;
+        transition: 500ms ease;
+    }
+
+    .info-modal-container-show {
+        transition: 500ms ease;
+        top: 100px;
+    }
+
+
+    
+
+  
+    //---- About Page -----
+    .about-page{
+        padding-bottom: 0;
+    }
+
+    //-----artist page-----
+    .artist-page {
+        padding-bottom: 0;
+    }
+
+    //-----profile-page-----
+    .profile-page {
+        padding-bottom: 0;
+    }
+
+    .artist-list-menu {
+        display: none;
+    }
+
+    .artist-photo-container {
+        padding-top: 70px;
+    }
+
+ 
+
+    //----- flahsday page-----
+    .flash-page {
+        padding-bottom: 0;
+    }
+
+    .flashday-about-container {
+        width: 75%;
+    }
+
+    .video-container {
+        width: 50%;
+        .video-flash-day {
+            position: relative;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+    }
+
+    .flashday-first-text {
+        width: 50%;
+        text-align: left;
+        p {
+            padding: 20px;
+        }
+    }
+
+    .flashday-photo-container {
+        margin-top: 30px;
+    }
+
+    
+
+
+
+    .col-lg-1 {width: 8.33%;}
+    .col-lg-2 {width: 16.66%;}
+    .col-lg-3 {width: 25%;}
+    .col-lg-4 {width: 33.33%;}
+    .col-lg-5 {width: 41.66%;}
+    .col-lg-6 {width: 50%;}
+    .col-lg-7 {width: 58.33%;}
+    .col-lg-8 {width: 66.66%;}
+    .col-lg-9 {width: 75%;}
+    .col-lg-10 {width: 83.33%;}
+    .col-lg-11 {width: 91.66%;}
+    .col-lg-12 {width: 100%;}
+
+}
+
+
+
+
+/*=========================================*/
+        /*TESTES*/
+/*=========================================*/
+
+
+
+//div container
+.teste1 {
+    border: orange solid;
+    position: relative;
+    width: 50%;
+    height: 400px;
+   
+ 
+  }
+  
+
+//imagem
+.teste2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   
+}
+
