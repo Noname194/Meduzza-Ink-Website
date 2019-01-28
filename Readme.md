@@ -25,6 +25,17 @@ $ gulp watch
 
 * Every saved changes, will compile to dist folder.
 
+# known errors
+
+ERROR: gulp: command not found
+
+* install gulp-cli should correct the error
+
+'''
+$ npm install -g -gulp-cli
+'''
+
+
 # Dependencies
 
 * Gulp
