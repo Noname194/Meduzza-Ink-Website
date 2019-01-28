@@ -31,9 +31,9 @@ ERROR: gulp: command not found
 
 * install gulp-cli should correct the error
 
-'''
+```
 $ npm install -g -gulp-cli
-'''
+```
 
 
 # Dependencies
